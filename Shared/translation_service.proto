@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option csharp_namespace = "Grpc.Translation";
+
+package translation;
+
+service GrpcTranslationService {
+  rpc Translate (GrpcTranslateRequest) returns (GrpcTranslateResponse);
+  rpc GetInfo(Empty) returns (GrpcGetInfoResponse);
+}
+
+message GrpcTranslateRequest {
+  string text = 1;
+  string language_from = 2;
+  string language_to = 3;
+}
+
+message GrpcTranslateResponse {
+  string message = 1;
+}
+
+message GrpcGetInfoResponse {
+	string memory = 1;
+	string size = 2;
+	string system = 3;
+}
+
+message Empty{}
