@@ -11,8 +11,7 @@ public sealed class Program
         var config = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddEnvironmentVariables()
-            .AddJsonFile("appsettings.Docker.json", optional: false)
-            .AddJsonFile("appsettings.Development.json", optional: false)
+            .AddJsonFile("appsettings.json", optional: false)
             .Build();
 
         var serviceProvider = new ServiceCollection()

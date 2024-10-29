@@ -42,9 +42,18 @@ public class Program
             return ConnectionMultiplexer.Connect(redis);
         });
 
+        builder.Services.AddCors();
+
         var app = builder.Build();
 
         app.MapGrpcService<TranslatorServiceImpl>();
+
+        app.UseCors(x =>
+        {
+            x.AllowAnyHeader();
+            x.AllowAnyMethod();
+            x.AllowAnyOrigin();
+        }); 
 
         app.Run();
     }
