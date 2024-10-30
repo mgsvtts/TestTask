@@ -1,5 +1,4 @@
 ﻿using ConsoleApplication.Translation.Translators;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace ConsoleApplication.Translation;
 
@@ -11,7 +10,7 @@ public static class TranslatorFactory
         {
             TranslatorType.Grpc => new GrpcTranslator(services),
             TranslatorType.Web => new WebTranslator(services),
-            _=>throw new NotImplementedException(),
+            _ => throw new NotImplementedException(),
         };
     }
 }

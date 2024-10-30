@@ -22,7 +22,7 @@ public sealed class Program
         {
             x.Address = new Uri(config.GetValue<string>("GrpcServerUrl")!);
         });
-        
+
         var services = serviceProvider.BuildServiceProvider();
 
         await new Engine(services).StartAsync();

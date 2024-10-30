@@ -1,9 +1,7 @@
-﻿using System.Net.Http.Json;
-using System.Text.Json;
-using GrpcServer.Application.Services.Dto;
+﻿using GrpcServer.Application.Services.Dto;
 using GrpcServer.Infrastructure.HttpClients.Abstractions;
 using GrpcServer.Infrastructure.HttpClients.Dto.ChatCompletion;
-using Microsoft.Extensions.Logging;
+using System.Text.Json;
 
 namespace GrpcServer.Infrastructure.HttpClients;
 

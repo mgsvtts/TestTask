@@ -12,9 +12,10 @@ public sealed class WebTranslator : ITranslator
 {
     private readonly IServiceProvider _services;
     private readonly string _url;
+
     public WebTranslator(IServiceProvider services)
     {
-        var config  = services.GetRequiredService<IConfiguration>();
+        var config = services.GetRequiredService<IConfiguration>();
         _url = config.GetValue<string>("HttpServerUrl")!;
         _services = services;
     }

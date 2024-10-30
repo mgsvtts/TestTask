@@ -1,17 +1,13 @@
 ﻿using ConsoleApplication.Translation;
 using ConsoleApplication.Translation.Translators;
 using ConsoleApplication.Translation.Translators.Dto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Channels;
-using System.Threading.Tasks;
 
 namespace ConsoleApplication;
+
 public class Engine
 {
     private readonly IServiceProvider _services;
+
     public Engine(IServiceProvider services)
     {
         _services = services;

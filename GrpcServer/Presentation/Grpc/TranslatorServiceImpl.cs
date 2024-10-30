@@ -1,9 +1,7 @@
 ﻿using Grpc.Core;
-using GrpcImpl.HttpClients.Dto;
 using Grpc.Translation;
 using GrpcServer.Application.Services.Abstractions;
 using GrpcServer.Application.Services.Dto;
-using GrpcServer.Infrastructure.HttpClients.Dto.ChatCompletion;
 
 namespace GrpcServer.Presentation.Grpc;
 

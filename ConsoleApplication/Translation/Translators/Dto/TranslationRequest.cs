@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
-
-namespace ConsoleApplication.Translation.Translators.Dto;
+﻿namespace ConsoleApplication.Translation.Translators.Dto;
 public readonly record struct TranslationRequest
 {
     public string Text { get; }
@@ -14,7 +7,7 @@ public readonly record struct TranslationRequest
 
     public TranslationRequest(string text, string from, string to)
     {
-        if(string.IsNullOrEmpty(text))
+        if (string.IsNullOrEmpty(text))
         {
             throw new ArgumentNullException(nameof(text));
         }

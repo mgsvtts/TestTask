@@ -3,7 +3,6 @@ using GrpcServer.Application.Services.Dto;
 using GrpcServer.Infrastructure.HttpClients.Abstractions;
 using Microsoft.Extensions.Caching.Distributed;
 using StackExchange.Redis;
-using System.Text.Json;
 
 namespace GrpcServer.Application.Services;
 
@@ -16,7 +15,7 @@ public sealed class TranslationService : ITranslationService
 
     public TranslationService(
         IOpenAIHttpClient httpClient,
-        IDistributedCache cache, 
+        IDistributedCache cache,
         IConnectionMultiplexer redis,
         ILogger<TranslationService> logger)
     {

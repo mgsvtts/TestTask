@@ -1,5 +1,5 @@
-﻿using System.Text.Json.Serialization;
-using GrpcServer.Application.Services.Dto;
+﻿using GrpcServer.Application.Services.Dto;
+using System.Text.Json.Serialization;
 
 namespace GrpcServer.Infrastructure.HttpClients.Dto.ChatCompletion;
 

@@ -1,13 +1,8 @@
-using Grpc.Translation;
 using GrpcServer.Application.Services;
 using GrpcServer.Application.Services.Abstractions;
 using GrpcServer.Infrastructure.HttpClients;
 using GrpcServer.Infrastructure.HttpClients.Abstractions;
 using GrpcServer.Presentation.Grpc;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using StackExchange.Redis;
 
 namespace GrpcServer;
@@ -53,7 +48,7 @@ public class Program
             x.AllowAnyHeader();
             x.AllowAnyMethod();
             x.AllowAnyOrigin();
-        }); 
+        });
 
         app.Run();
     }
